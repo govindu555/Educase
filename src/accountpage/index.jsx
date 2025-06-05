@@ -3,9 +3,8 @@ import './index.css'
 const AccountPage=()=>{
     return(
         <div className='main3'>
-            <div>
-                <h1 className='head'>Create your</h1>
-                <h1 className='head'>PopX account</h1>
+            <div className='main5'>
+                <h1 className='head'>Create your<br/>PopX account</h1>
                 <form>
                     <fieldset>
                         <legend className='name'>Full Name<span>*</span></legend>
