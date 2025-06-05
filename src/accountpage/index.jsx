@@ -1,14 +1,42 @@
 import './index.css'
 
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { add } from '../reduxpage';
+import { useNavigate } from 'react-router-dom';
+
 const AccountPage=()=>{
+
+     const [data,setData]=useState({
+        name:"",
+        email:"",
+        password:""
+     })
+
+     const nav=useNavigate()
+
+     const dispatch=useDispatch()
+
+
+     const alldata=(e)=>{
+        const {name,value}=e.target
+        setData({...data,[name]:value})
+     }
+
+    const submitfun=(e)=>{
+        e.preventDefault()
+        dispatch(add(data))
+        nav("/loginpage")
+    }
+
     return(
         <div className='main3'>
             <div className='main5'>
                 <h1 className='head'>Create your<br/>PopX account</h1>
-                <form>
+                <form onSubmit={submitfun}>
                     <fieldset>
                         <legend className='name'>Full Name<span>*</span></legend>
-                        <input className='inputname' type='name' required/>
+                        <input className='inputname' type='name' name="name" onChange={alldata} required/>
                     </fieldset>
                     <fieldset>
                         <legend className='number'>Phone number<span>*</span></legend>
@@ -16,11 +44,11 @@ const AccountPage=()=>{
                     </fieldset>
                     <fieldset>
                         <legend>Email address<span>*</span></legend>
-                        <input className='inputname' type='email' required/>
+                        <input className='inputname' type='email' name='email' onChange={alldata} required/>
                     </fieldset>
                     <fieldset>
                         <legend>Password<span>*</span></legend>
-                        <input className='inputname' type='password' required/>
+                        <input className='inputname' type='password' name='password' onChange={alldata} required/>
                     </fieldset>
                     <fieldset>
                         <legend>Company name</legend>
