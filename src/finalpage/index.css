@@ -1,0 +1,26 @@
+.main7{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head3{
+  font-size: 25px;
+}
+
+.image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.final{
+    display: flex;
+}
+
+.head4{
+    font-size:15px;
+    margin-left: 20px;
+}
