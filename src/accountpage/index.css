@@ -1,0 +1,54 @@
+.main3{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.head{
+    font-size: 30px;
+}
+
+fieldset{
+    width: 300px;
+    height: 5px;
+    border-radius: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+legend{
+    color: blue;
+}
+
+span{
+    color: red;
+}
+
+.inputname{
+    width: 300px;
+    height: 25px;
+    border: 0px;
+    font-size: 20px;
+}
+
+.inputname:focus{
+    outline: none;
+}
+
+.agency{
+    font-size:15px;
+}
+
+.button{
+    width: 330px;
+    background-color: blue;
+    color: white;
+    margin-top: 30px;
+}
+
+.radio{
+    margin-right: 20px;
+}
