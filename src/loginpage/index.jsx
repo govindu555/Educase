@@ -9,7 +9,7 @@ const LoginPage=()=>{
         return state.user
     })
 
-    const [password,setPassword]=useState()
+    const [password,setPassword]=useState("")
 
     const [status,setStatus]=useState(false)
 
@@ -41,7 +41,7 @@ const LoginPage=()=>{
                     <legend>Password</legend>
                     <input className='inputname' type='password' onChange={(e)=>{setPassword(e.target.value)}} required/>
                 </fieldset>
-                 {status?<p className='status'>Sorry, Password is worng</p>:<></>}
+                 {status?<p className='status'>Sorry, Password is wrong</p>:<></>}
                 <button type='submit' className='button'>Login</button>
               </form>
            </div>
